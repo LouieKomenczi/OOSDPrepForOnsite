@@ -7,6 +7,31 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="RadioButtons" Grid.Row="0" HorizontalAlignment="Center" Orientation="Horizontal" VerticalAlignment="Center" >
+            <RadioButton x:Name="rdbAll" Content="All" FontSize="16" Margin="50,0,0,0" Checked="RdbAll_Checked"/>
+            <RadioButton x:Name="rdbEmployee" Content="Employee" FontSize="16" Margin="50,0,0,0" Checked="RdbEmployee_Checked"/>
+            <RadioButton x:Name="rdbPartTime" Content="Part Time" FontSize="16" Margin="50,0,0,0" Checked="RdbPartTime_Checked"/>
+            <RadioButton x:Name="rdbContractor" Content="Contractor" FontSize="16" Margin="50,0,0,0" Checked="RdbContractor_Checked"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <ListBox x:Name="lbxDisplay" Height="250"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="50,0,0,20">
+            <Label Content="Employee" FontSize="16"> </Label>
+            <TextBlock  x:Name="txbEmployee" TextWrapping="Wrap" Text=""/>
+            <Label Content="Part Timer" Margin="50,0,0,0" FontSize="16"></Label>
+            <TextBlock  x:Name="txbPartTime" TextWrapping="Wrap" Text=""/>
+            <Label Content="Contractors" Margin="50,0,0,0" FontSize="16"></Label>
+            <TextBlock  x:Name="txbContractor" TextWrapping="Wrap" Text=""/>
+        </StackPanel>
     </Grid>
+
+
+
 </Window>
